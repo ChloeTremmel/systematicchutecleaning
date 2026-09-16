@@ -17,13 +17,72 @@
     section{padding:96px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:44px}.section-head h2{font-size:clamp(2rem,3.8vw,3.35rem);color:var(--navy);letter-spacing:-.04em;max-width:670px}.section-head p{max-width:460px;color:var(--muted);margin:0}.services{background:var(--cream)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border-radius:14px;padding:30px;border:1px solid rgba(11,35,63,.08);transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.icon{width:52px;height:52px;border-radius:12px;background:#fff4dc;color:var(--navy);display:grid;place-items:center;font-size:1.45rem;margin-bottom:23px}.card h3{font-size:1.25rem;color:var(--navy);margin-bottom:11px}.card p{color:var(--muted);margin:0}.card a{display:inline-block;color:var(--teal);font-weight:700;margin-top:20px}.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}.visual{min-height:480px;border-radius:20px;background:linear-gradient(145deg,var(--navy),#215872);padding:38px;position:relative;color:white;overflow:hidden}.visual:before{content:"";position:absolute;width:270px;height:270px;border:55px solid rgba(243,179,61,.18);border-radius:50%;right:-75px;bottom:-65px}.visual strong{font:800 4.5rem/1 Manrope;color:var(--gold)}.visual p{max-width:320px;font-size:1.15rem}.vent{position:absolute;bottom:38px;left:38px;right:38px;height:130px;background:#e7edf0;border:12px solid white;border-radius:8px;display:grid;gap:9px;padding:16px}.vent i{display:block;height:8px;border-radius:9px;background:#91a4ad}.copy h2{font-size:clamp(2rem,4vw,3.5rem);color:var(--navy);letter-spacing:-.04em;margin:15px 0 20px}.copy>p{color:var(--muted);font-size:1.05rem}.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0}.check{font-weight:700;color:var(--navy)}.check:before{content:"✓";display:inline-grid;place-items:center;width:25px;height:25px;background:#dff5f1;color:var(--teal);border-radius:50%;margin-right:9px}
     .process{background:var(--navy);color:white}.process .section-head h2{color:white}.process .section-head p{color:#bdc9d4}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}.step{border-top:1px solid #39516a;padding-top:23px}.num{color:var(--gold);font:800 1.8rem Manrope}.step h3{margin:14px 0 9px}.step p{color:#bdc9d4}.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}.faq-title h2{font-size:clamp(2rem,3.6vw,3.2rem);color:var(--navy);letter-spacing:-.04em;margin:14px 0}.faq-title p{color:var(--muted)}details{border-bottom:1px solid var(--line);padding:20px 0}summary{font:700 1.05rem Manrope;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}summary:after{content:"+";color:var(--teal);font-size:1.4rem}details[open] summary:after{content:"−"}details p{color:var(--muted);margin-bottom:2px}
     .cta{padding-top:0}.cta-box{background:var(--gold);border-radius:20px;padding:55px 60px;display:flex;align-items:center;justify-content:space-between;gap:35px;color:var(--navy)}.cta-box h2{font-size:clamp(1.8rem,3.6vw,3rem);letter-spacing:-.04em}.cta-box p{margin:8px 0 0}.cta-box .btn{background:var(--navy);color:white;white-space:nowrap}footer{background:#071a2e;color:#bac7d1;padding:60px 0 25px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px}.footer-grid h3{color:white;margin-bottom:16px}.footer-grid a{display:block;margin:8px 0}.footer-grid a:hover{color:var(--gold)}.footer-bottom{border-top:1px solid #24394e;margin-top:45px;padding-top:22px;display:flex;justify-content:space-between;font-size:.87rem}.success{display:none;background:#dff5f1;color:#0d6f64;padding:12px;border-radius:8px;margin-top:12px;font-weight:700}
+    .gallery{
+  background:var(--cream);
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.gallery-item{
+  margin:0;
+  background:white;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid rgba(11,35,63,.08);
+  box-shadow:0 8px 25px rgba(11,35,63,.06);
+  transition:.25s;
+}
+
+.gallery-item:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+
+.gallery-item img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
+
+.gallery-item figcaption{
+  padding:18px 20px 20px;
+}
+
+.gallery-item h3{
+  color:var(--navy);
+  font-size:1.05rem;
+  margin-bottom:5px;
+}
+
+.gallery-item p{
+  color:var(--muted);
+  font-size:.9rem;
+  margin:0;
+}
+
+@media(max-width:900px){
+  .gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+}
     @media(max-width:900px){.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:white;padding:22px 25px;box-shadow:var(--shadow);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.hero-grid,.split,.faq-grid{grid-template-columns:1fr}.hero-grid{padding:60px 0}.hero-card{max-width:580px}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:18px}.split{gap:45px}.footer-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:600px){.wrap{width:min(100% - 28px,1160px)}.topbar .wrap span:first-child{display:none}.topbar .wrap{justify-content:center}nav{height:68px}.navlinks{top:68px}.brand{font-size:.9rem}section{padding:70px 0}h1{font-size:2.65rem}.hero-grid{min-height:auto;gap:36px}.trustline{display:grid;gap:8px}.hero-card{padding:27px 22px}.cards,.steps,.checks,.footer-grid{grid-template-columns:1fr}.visual{min-height:400px}.cta-box{padding:38px 27px;display:block}.cta-box .btn{margin-top:24px}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:8px}}
   </style>
 </head>
 <body>
   <div class="topbar"><div class="wrap"><span>Serving homes and businesses across <b>NJ, PA & CT</b></span><span>Call for a free estimate: <b>973-703-3447</b></span></div></div>
-  <header><nav class="wrap"><a class="brand" href="#top"><span class="mark"></span><span>Systematic Cleaning<small>Dryer Chute Specialists</small></span></a><button class="menu" aria-label="Open menu" aria-expanded="false">☰</button><div class="navlinks"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#process">Our Process</a><a href="#faq">FAQs</a><a class="btn" href="#quote">Request a Quote</a></div></nav></header>
+  <header><nav class="wrap"><a class="brand" href="#top"><span class="mark"></span><span>Systematic Cleaning<small>Dryer Chute Specialists</small></span></a><button class="menu" aria-label="Open menu" aria-expanded="false">☰</button><div class="navlinks"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#process">Our Process</a><a href="#gallery">Gallery</a><a href="#faq">FAQs</a><a class="btn" href="#quote">Request a Quote</a></div></nav></header>
   <main id="top">
     <section class="hero"><div class="wrap hero-grid"><div><span class="eyebrow">Dryer safety starts here</span><h1>Clear the lint. Protect the building.</h1><p>Professional dryer chute and vent cleaning for assisted-living facilities, apartment buildings, condos, laundromats, and other commercial properties.</p><div class="actions"><a class="btn" href="#quote">Get a Free Estimate →</a><a class="btn outline" href="tel:+19737033447">Call 973-703-3447</a></div><div class="trustline"><span>Residential & commercial</span><span>Careful, thorough service</span><span>Serving NJ, PA & CT</span></div></div>
       <form class="hero-card" id="quote"><h2>Request your free estimate</h2><p>Tell us a little about the property and we’ll follow up to discuss the right service.</p><div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="First and last name"></div><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="(973) 555-0000"></div><div class="field"><label for="property">Property type</label><select id="property" name="property"><option>Single-family home</option><option>Apartment or condo</option><option>Multi-unit building</option><option>Commercial property</option><option>Other</option></select></div><button class="btn dark" type="submit">Request My Estimate</button><div class="success" role="status">Thanks! Your email app will open with the request details.</div></form>
@@ -31,6 +90,82 @@
     <section class="services" id="services"><div class="wrap"><div class="section-head"><h2>Focused cleaning for safer, more efficient dryers</h2><p>From one dryer to an entire property, service is tailored to the vent layout, access points, and level of buildup.</p></div><div class="cards"><article class="card"><div class="icon">⌂</div><h3>Residential Dryer Vents</h3><p>Remove compacted lint and debris from the vent line to restore airflow and help dryers perform as intended.</p><a href="#quote">Request service →</a></article><article class="card"><div class="icon">▦</div><h3>Multi-Unit Dryer Chutes</h3><p>Thorough chute and duct cleaning for apartment buildings, condominiums, associations, and property managers.</p><a href="#quote">Discuss your property →</a></article><article class="card"><div class="icon">⚙</div><h3>Commercial Systems</h3><p>Practical cleaning solutions for laundromats, salons, gyms, hospitality, and other high-use dryer systems.</p><a href="#quote">Plan a cleaning →</a></article></div></div></section>
     <section id="why"><div class="wrap split"><div class="visual"><span class="eyebrow">Built around airflow</span><p><strong>01</strong><br>One overlooked vent can slow drying and allow lint to keep accumulating.</p><div class="vent"><i></i><i></i><i></i><i></i><i></i></div></div><div class="copy"><span class="eyebrow">Why clean the full vent path?</span><h2>The lint you can’t see matters most.</h2><p>The lint screen catches only part of what each load produces. Material that escapes can settle along the vent line, around turns, and near exterior exits—reducing airflow and increasing fire risk over time.</p><div class="checks"><div class="check">Improve airflow</div><div class="check">Support faster drying</div><div class="check">Reduce lint buildup</div><div class="check">Protect equipment</div></div><a class="btn dark" href="#quote">Schedule an Inspection</a></div></div></section>
     <section class="process" id="process"><div class="wrap"><div class="section-head"><h2>A straightforward, property-conscious process</h2><p>Systematic service means you’ll know what we’re doing, why we’re doing it, and what we find along the way.</p></div><div class="steps"><div class="step"><span class="num">01</span><h3>Inspect</h3><p>We review the dryer connection, vent route, access points, and exterior termination.</p></div><div class="step"><span class="num">02</span><h3>Protect</h3><p>We prepare the work area and take care around walls, floors, appliances, and fixtures.</p></div><div class="step"><span class="num">03</span><h3>Clean</h3><p>Purpose-built tools loosen and remove lint and debris throughout the accessible line.</p></div><div class="step"><span class="num">04</span><h3>Confirm</h3><p>We review the result, note any concerns, and share practical maintenance guidance.</p></div></div></div></section>
+    <section class="gallery" id="gallery">
+  <div class="wrap">
+
+    <div class="section-head">
+      <h2>See our work in action</h2>
+      <p>
+        A look at dryer vent and chute cleaning projects completed
+        for residential, multi-unit, and commercial properties.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <figure class="gallery-item">
+        <img src="images/job-01.jpg"
+             alt="Dryer vent cleaning project"
+             loading="lazy">
+        <figcaption>
+          <h3>Dryer Vent Cleaning</h3>
+          <p>Lint and debris removed to help restore proper airflow.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="images/job-02.jpg"
+             alt="Lint removed from a dryer vent"
+             loading="lazy">
+        <figcaption>
+          <h3>Lint Removal</h3>
+          <p>A look at buildup removed during a professional cleaning.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="images/job-03.jpg"
+             alt="Commercial dryer vent cleaning"
+             loading="lazy">
+        <figcaption>
+          <h3>Commercial Service</h3>
+          <p>Cleaning for high-use dryer and ventilation systems.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="images/job-04.jpg"
+             alt="Dryer chute cleaning project"
+             loading="lazy">
+        <figcaption>
+          <h3>Chute Cleaning</h3>
+          <p>Professional cleaning for extended dryer-chute systems.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="images/job-05.jpg"
+             alt="Dryer vent before professional cleaning"
+             loading="lazy">
+        <figcaption>
+          <h3>Before Cleaning</h3>
+          <p>Accumulated material restricting the dryer vent path.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="images/job-06.jpg"
+             alt="Dryer vent after professional cleaning"
+             loading="lazy">
+        <figcaption>
+          <h3>After Cleaning</h3>
+          <p>The vent path after accumulated lint and debris were removed.</p>
+        </figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
     <section id="faq"><div class="wrap faq-grid"><div class="faq-title"><span class="eyebrow">Common questions</span><h2>Helpful answers before you book</h2><p>Have a property-specific question? Call or request an estimate and tell us about your setup.</p></div><div><details open><summary>What are signs that a dryer vent may need cleaning?</summary><p>Longer drying times, unusually hot laundry or appliances, a burning smell, visible lint near the exterior vent, and weak airflow can all signal restriction. Stop using the dryer and seek professional help if you notice overheating or a burning odor.</p></details><details><summary>Do you clean dryer chutes in apartment buildings?</summary><p>Yes. The service is designed for both individual vents and shared or extended dryer-chute systems in multi-unit properties, subject to an on-site assessment.</p></details><details><summary>How long does an appointment take?</summary><p>Timing depends on the vent length, access, number of dryers, and level of buildup. We’ll provide a clearer estimate after learning about your property.</p></details><details><summary>Can you work with property managers and associations?</summary><p>Yes. We can discuss access, scheduling, unit coordination, and the scope needed for multi-unit or commercial properties.</p></details></div></div></section>
     <section class="cta"><div class="wrap"><div class="cta-box"><div><h2>Not sure what’s inside the vent?</h2><p>Let’s take a look and recommend the right next step.</p></div><a class="btn" href="#quote">Get a Free Estimate →</a></div></div></section>
   </main>
